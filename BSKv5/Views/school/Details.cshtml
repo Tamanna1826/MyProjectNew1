@@ -1,0 +1,36 @@
+﻿@model BSKv5.Models.school
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>school</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SchoolCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SchoolCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SchoolName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SchoolName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orgID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orgID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SchoolID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

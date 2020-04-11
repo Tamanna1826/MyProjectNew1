@@ -1,0 +1,48 @@
+﻿@model BSKv5.Models.Organizer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Organzier Form</h1>
+
+<h4>Organizer Form</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="orgName" class="control-label"></label>
+                <input asp-for="orgName" class="form-control" />
+                <span asp-validation-for="orgName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgPhone" class="control-label"></label>
+                <input asp-for="orgPhone" class="form-control" />
+                <span asp-validation-for="orgPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgEmail" class="control-label"></label>
+                <input asp-for="orgEmail" class="form-control" />
+                <span asp-validation-for="orgEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgPassword" class="control-label"></label>
+                <input asp-for="orgPassword" class="form-control" />
+                <span asp-validation-for="orgPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

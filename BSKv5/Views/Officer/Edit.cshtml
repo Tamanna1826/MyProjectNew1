@@ -1,0 +1,41 @@
+﻿@model BSKv5.Models.Officer
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Officer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ofID" />
+            <div class="form-group">
+                <label asp-for="ofName" class="control-label"></label>
+                <input asp-for="ofName" class="form-control" />
+                <span asp-validation-for="ofName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ofEmail" class="control-label"></label>
+                <input asp-for="ofEmail" class="form-control" />
+                <span asp-validation-for="ofEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ofPassword" class="control-label"></label>
+                <input asp-for="ofPassword" class="form-control" />
+                <span asp-validation-for="ofPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,42 @@
+﻿@model BSKv5.Models.Organizer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Organizer</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orgName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orgName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orgPhone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orgPhone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orgEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orgEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orgPassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orgPassword)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.orgID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
